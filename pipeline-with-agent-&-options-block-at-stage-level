@@ -1,0 +1,14 @@
+pipeline {
+    agent none
+    stages {
+        stage('clone'){
+            agent Any
+            options {
+                setTimeout(time:1 unit:'SECONDS')
+            }
+            steps{
+                git clone 
+            }
+        }
+    }
+}
